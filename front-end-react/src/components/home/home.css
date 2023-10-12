@@ -1,0 +1,91 @@
+*,
+body,
+html,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+}
+a {
+  text-decoration: none;
+}
+
+li,
+ul {
+  list-style: none;
+}
+
+#homepage-container {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  min-height: 2.7rem;
+  align-items: center;
+  border-bottom: 1px solid rgb(229, 227, 227);
+  padding: 0 1rem;
+}
+
+#navbar .header-section {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  font-size: 1rem;
+}
+.header-section.section-2 > div {
+  margin: 0 0.5rem;
+}
+.header-section.section-2 > div button {
+  padding: 4px;
+}
+
+#main-section {
+  background-color: rgb(250, 250, 250);
+  padding: 0 1rem;
+  display: flex;
+  height: 100%;
+}
+
+#main-section .sidebar {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  width: 18rem;
+  border-right: 1px solid rgb(229, 227, 227);
+  background-color: #ffffff;
+  align-items: center;
+  height: 100%;
+}
+#main-section .sidebar > h2 {
+  font-weight: 300;
+}
+#main-section .main-content {
+  padding: 1.5rem;
+}
+
+#logout {
+  color: rgb(225, 16, 16);
+}
+
+/* */
+nav.nav-bar {
+  white-space: nowrap;
+}
+
+nav.nav-bar > ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}

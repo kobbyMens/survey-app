@@ -1,6 +1,17 @@
-#root {
-  background-color: aliceblue;
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+#error-page {
+  margin-top: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-direction: column;
+}
+
+#error-page > h1,
+p {
+  margin: 1.5rem 0;
+}
+
+#error-page > p > i {
+  color: #818181;
 }
