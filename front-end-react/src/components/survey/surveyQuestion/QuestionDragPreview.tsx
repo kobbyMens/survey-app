@@ -1,5 +1,4 @@
 import { type CSSProperties, FC } from "react";
-import QuestionText from "./Question";
 const styles: CSSProperties = {
   background: "#fff",
   border: "1px solid #e7c239",
@@ -15,10 +14,17 @@ interface DragPreviewProps {
   text: string;
   customStyles: CSSProperties;
 }
+
+interface QuestionPreviewProps {
+  text: string;
+}
+export const QuestionPreview: FC<QuestionPreviewProps> = ({ text }) => {
+  return <span>{text}</span>;
+};
 const QuestionDragPreview: FC<DragPreviewProps> = ({ text, customStyles }) => {
   return (
     <div style={{ ...styles, ...customStyles }}>
-      <QuestionText questionText={text} />
+      <QuestionPreview text={text} />
     </div>
   );
 };

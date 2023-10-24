@@ -1,8 +1,11 @@
 import { type FC, CSSProperties } from "react";
-import { ITEM_TYPES } from "../../utils/survey/ItemTypes";
-import QuestionDragPreview from "./surveyQuestion/QuestionDragPreview";
 import { type XYCoord, useDragLayer } from "react-dnd";
+import { ITEM_TYPES } from "../../utils/survey/ItemTypes";
 
+// components
+import QuestionDragPreview from "./surveyQuestion/QuestionDragPreview";
+
+// =====================================================================>
 const layerStyles: CSSProperties = {
   display: "flex",
   position: "fixed",
@@ -33,6 +36,7 @@ function getItemStyles(
   };
 }
 
+// ===================================================================>
 const CustomDragLayer: FC = () => {
   const { item, itemType, isDragging, currentOffset } = useDragLayer(
     (monitor: any) => ({

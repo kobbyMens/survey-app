@@ -1,5 +1,7 @@
 import { Node } from "slate";
-import { type CustomElement } from "../components/surveys/surveyQuestion/Question";
+import { type CustomElement } from "../components/survey/surveyQuestion/Question";
+
+// =========================================================================
 export const serialize = (value: any[]): string => {
   return value.map((n) => Node.string(n)).join("\n");
 };

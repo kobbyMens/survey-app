@@ -27,7 +27,7 @@ const MyNavTabs: React.FC = () => {
             <MyTab to={"/home/worksapce"}>My workspace</MyTab>
           </li>
           <li>
-            <MyTab to={"/home/surveys"}>My surveys</MyTab>
+            <MyTab to={"/home/surveys"}>Create Survey</MyTab>
           </li>
         </ul>
       </nav>

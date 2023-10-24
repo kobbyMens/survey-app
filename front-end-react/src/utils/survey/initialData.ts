@@ -16,5 +16,21 @@ export const initialData = {
         },
       ],
     },
+    {
+      name: "page 2",
+      id: "page2",
+      elements: [
+        {
+          type: "radiogroup",
+          id: "question1",
+          name: "This is for page 2",
+          choices: [
+            { id: "item1", content: "item 1" },
+            { id: "item2", content: "item 2" },
+            { id: "item3", content: "item 3" },
+          ],
+        },
+      ],
+    },
   ],
 };

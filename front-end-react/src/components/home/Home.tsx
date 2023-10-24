@@ -1,6 +1,7 @@
 import "./home.css";
 import MyNavMenu from "../materialUIComponents/MyNavMenu";
 import MyNavTabs from "./MyNavTab";
+import { Outlet } from "react-router-dom";
 const Home: React.FC = () => {
   return (
     <>
@@ -20,14 +21,7 @@ const Home: React.FC = () => {
 
         {/* Main body*/}
         <div id="main-section">
-          {/* Sidebar */}
-          <div className="sidebar">
-            <h2>Create new survey</h2>
-          </div>
-          {/* Main content display area */}
-          <div className="main-content">
-            <h1>This is where the main section will be</h1>
-          </div>
+          <Outlet />
         </div>
       </div>
     </>

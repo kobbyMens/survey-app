@@ -1,5 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
-import surveyReducer from "./slices/survey";
+import surveyReducer from "./slices/surveySlice";
 
 // =============================================================
 

@@ -11,7 +11,7 @@ import Home from "./components/home/Home";
 import Login from "./components/authentication/login/Login";
 import ErrorPage from "./components/ErrorPage";
 import MyWorkspace from "./components/workspace/MyWorkspace";
-import MySurveys from "./components/surveys/MySurveys";
+import MySurveys from "./components/survey/SurveyContainer";
 import SignUp from "./components/authentication/signup/SignUp";
 //
 import "./App.css";
@@ -33,23 +33,24 @@ function App() {
                     <Home />
                   </RequiredAuth>
                 }
-              />
-              <Route
-                path="/home/surveys"
-                element={
-                  <RequiredAuth>
-                    <MySurveys />
-                  </RequiredAuth>
-                }
-              />
-              <Route
-                path="/home/worksapce"
-                element={
-                  <RequiredAuth>
-                    <MyWorkspace />
-                  </RequiredAuth>
-                }
-              />
+              >
+                <Route
+                  path="/home/surveys"
+                  element={
+                    <RequiredAuth>
+                      <MySurveys />
+                    </RequiredAuth>
+                  }
+                />
+                <Route
+                  path="/home/worksapce"
+                  element={
+                    <RequiredAuth>
+                      <MyWorkspace />
+                    </RequiredAuth>
+                  }
+                />
+              </Route>
             </Route>
           </Routes>
         </AuthProvider>
