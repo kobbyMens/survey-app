@@ -1,9 +1,15 @@
+import { type XYCoord } from "react-dnd";
+
+// ===========================================================>
 export const closestSide = (
-  distToTop: number,
-  distToBottom: number,
-  distToLeft: number,
-  distToRight: number
+  mouseXY: XYCoord,
+  questionContainerDomRect: DOMRect
 ): string | null => {
+  const distToTop = mouseXY.y - questionContainerDomRect.top;
+  const distToBottom = questionContainerDomRect.bottom - mouseXY.y;
+  const distToLeft = mouseXY.x - questionContainerDomRect.left;
+  const distToRight = questionContainerDomRect.right - mouseXY.x;
+
   let closestSide;
 
   if (

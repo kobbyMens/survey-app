@@ -1,5 +1,5 @@
 import { Node } from "slate";
-import { type CustomElement } from "../components/survey/surveyQuestion/Question";
+import { type CustomElement } from "../components/survey/surveyCreator/surveyCreatorQuestion/Question";
 
 // =========================================================================
 export const serialize = (value: any[]): string => {

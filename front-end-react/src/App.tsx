@@ -1,61 +1,33 @@
-import { Route, Routes } from "react-router-dom";
-
-//redux
-import store from "./redux/store";
-import { Provider } from "react-redux";
+import { Outlet } from "react-router-dom";
 
 //components
+import MainHeader from "./components/home/header/MainHeader";
 import AuthProvider from "./components/authentication/login/AuthProvider";
 import RequiredAuth from "./components/authentication/login/RequiredAuth";
-import Home from "./components/home/Home";
-import Login from "./components/authentication/login/Login";
+
 import ErrorPage from "./components/ErrorPage";
 import MyWorkspace from "./components/workspace/MyWorkspace";
-import MySurveys from "./components/survey/SurveyContainer";
+import MainSurveyCreatorContent from "./components/survey/SurveyCreator";
 import SignUp from "./components/authentication/signup/SignUp";
+import SurveyCreator from "./components/survey/surveyCreator/Creator";
+import SurveyPreview from "./components/survey/previewSurvey/SurveyPreveiw";
+import SurveyCreatorJSONEditor from "./components/survey/surveyJsonEditor/SurveyCreatorJSONEditor";
+import SurveyThemes from "./components/survey/surveyCreatorthemes/SurveyThemes";
+import IndexHomePage from "./components/home/IndexHomePage";
 //
 import "./App.css";
 
-// ----------------------------------------------------------------------------
+// ==================================================================>
+
 function App() {
   return (
-    <>
-      <Provider store={store}>
-        <AuthProvider>
-          <Routes>
-            <Route errorElement={<ErrorPage />}>
-              <Route path="/" element={<Login />} />
-              <Route path="/admin/signup" element={<SignUp />} />
-              <Route
-                path="/home"
-                element={
-                  <RequiredAuth>
-                    <Home />
-                  </RequiredAuth>
-                }
-              >
-                <Route
-                  path="/home/surveys"
-                  element={
-                    <RequiredAuth>
-                      <MySurveys />
-                    </RequiredAuth>
-                  }
-                />
-                <Route
-                  path="/home/worksapce"
-                  element={
-                    <RequiredAuth>
-                      <MyWorkspace />
-                    </RequiredAuth>
-                  }
-                />
-              </Route>
-            </Route>
-          </Routes>
-        </AuthProvider>
-      </Provider>
-    </>
+    <div>
+      <MainHeader />
+      {/* Main body*/}
+      <main className="main-section">
+        <Outlet />
+      </main>
+    </div>
   );
 }
 

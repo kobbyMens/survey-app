@@ -24,8 +24,7 @@ const MyWorkspace: React.FC = () => {
   return (
     <WorkSpaceContainer>
       <div>
-        <h1>Hi 😊</h1>
-        <h2>Welcome to Free Survey Creator By Kobby! </h2>
+        <h2> Work in progess........... </h2>
       </div>
     </WorkSpaceContainer>
   );

@@ -21,7 +21,7 @@ export const signup = async (
     let existingEmail = await adminModel.findOne({ email });
 
     if (existingEmail) {
-      res.json({ messge: "Account already exist", status: "Failed" });
+      res.json({ message: "Account already exist", status: "Failed" });
     } else {
       let hashedPassword = await bcrypt.hash(password, 10);
       await adminModel.create({
